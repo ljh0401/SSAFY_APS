@@ -1,6 +1,6 @@
-day02_0730화
+day03_0731수
 4
-SWEA_1210_ladder1
-SWEA_1954_달팽이숫자
-SWEA_1209_Sum
-SWEA_2001_파리퇴치
+SWEA_1989_초심자의회문검사
+SWEA_1213_String
+SWEA_1215_회문1
+SWEA_1216_회문2
