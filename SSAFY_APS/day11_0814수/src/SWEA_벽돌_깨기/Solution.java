@@ -1,7 +1,11 @@
+package SWEA_벽돌_깨기;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+//8.15. 추가 진행 예정, 주석 달기
 class Solution
 {
 	static int N, W, H;
@@ -97,6 +101,6 @@ class Solution
 	}
 	
 	public static int countA(int[][] doll) {
-		
+		return 1;
 	}
 }
