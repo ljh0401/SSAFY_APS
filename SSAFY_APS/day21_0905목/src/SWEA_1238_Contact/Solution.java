@@ -27,24 +27,29 @@ public class Solution {
 	}
 	public static int find(int num) {
 		boolean[] bb = new boolean[101];
-		Queue<Int[]> queue = new LinkedList<>();
-        queue.add(num);
+		Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[] {0, num});
         bb[num] = true;
 		int idx = 0;
         int count = 0;
 		while (!queue.isEmpty()) {
 			int[] tmp = queue.poll();
-            if (!map.containsKey(tmp)) {
-                idx = tmp;
-                continue;
+			if (idx != tmp[0] ) {
+				idx = tmp[0];
+				count = tmp[1];
+			}
+			else {
+				count = Math.max(count, tmp[1]);
+			}
+            if (!map.containsKey(tmp[1])) {
+            	continue;
             }
-			for (int n : map.get(tmp)) {
+			for (int n : map.get(tmp[1])) {
 				if (bb[n]) continue;
 				bb[n] = true;
-				idx = Math.max(idx, n);
-				if (map.containsKey(n)) queue.add(n);
+				queue.add(new int[] {idx+1, n});
 			}
 		}
-		return idx;
+		return count;
 	}
 }
